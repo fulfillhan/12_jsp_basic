@@ -24,6 +24,32 @@
     <% 
      }
     %>
+    
+    <hr>
+    
+    <h3>반복문 for</h3>
+    <%
+         for (int i = 0; i < 10; i++){
+     %>
+        	 <p>for 문 : <%=i %></p>
+     <% 
+         }
+    
+    %>
+    <hr>
+    <h3>반복문 while</h3>
+    <%
+    
+      int idx = 0;
+    while(idx < 10){
+    	  %>
+   <P>while 문 : <%=idx
+   %></P>
+   <% 
+    }
+    
+    %>
+    
 
 </body>
 </html>
