@@ -13,10 +13,10 @@
 	    request.setCharacterEncoding("utf-8");	
 	
 		String yourAccount = request.getParameter("yourAccount"); 
-		int yourMoney      = Integer.parseInt(request.getParameter("yourMoney")); // name 요소값이 없어도 가져올 수 있는것인가? 가지고 온다면 해당 데이터는 null??
+		int yourMoney      = Integer.parseInt(request.getParameter("yourMoney")); // name 요소값이 없어도 가져올 수 있음-> 해당 데이터는 null.
 		
 		String myAccount = request.getParameter("myAccount"); 
-		int myMoney      = Integer.parseInt(request.getParameter("myMoney"));//? 이부분 데이터는 null?
+		int myMoney      = Integer.parseInt(request.getParameter("myMoney"));
 		
 		String sendAccount = request.getParameter("sendAccount"); 
 		int sendMoney 	   = Integer.parseInt(request.getParameter("sendMoney"));
@@ -26,7 +26,7 @@
 			if (sendMoney <= myMoney) {
 				myMoney   = myMoney - sendMoney;
 				result = yourAccount + "계좌에 " + sendMoney +"원을 이체를 완료하였습니다. 남아있는 금액은 " + myMoney + "원 입니다";
-				//result += 남아있는 금액은 " + myMoney + "원 입니다"; 가능?
+				
 			} 
 			else {
 				result = myAccount + "계좌에 잔액이 " + (sendMoney - myMoney) + "만큼  부족합니다.";

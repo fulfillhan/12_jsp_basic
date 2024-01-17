@@ -19,7 +19,7 @@
 		String gender = request.getParameter("gender");
 		String[] hobbies = request.getParameterValues("hobbies");
 		String travel = request.getParameter("travel");
-		String content = request.getParmater("content");
+		String content = request.getParameter("content");
 
 	%>
 	<fieldset>
