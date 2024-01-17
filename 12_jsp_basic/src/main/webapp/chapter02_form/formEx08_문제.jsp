@@ -4,6 +4,11 @@
 <head>
 <meta charset="utf-8">
 <title>연습문제</title>
+<script>
+ 	function checkInput(){
+ 		document.f.submit();
+ 	}
+</script>
 </head>
 <body>
 
@@ -50,7 +55,7 @@
 	
 	%>
 
-	<form>
+	<form action="formEx08Pro_연습.jsp" method="post" name="f">
 		<fieldset>
 			<p>이체할 계좌번호를 입력하세요 : <input type="text" name="sendAccount"></p>
 			<p>이체할 금액을 입력하세요:      <input type="text" name="sendMoney"></p>

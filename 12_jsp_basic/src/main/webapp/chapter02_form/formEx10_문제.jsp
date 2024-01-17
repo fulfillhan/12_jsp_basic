@@ -14,7 +14,7 @@
 		- 아래의 폼 전송 데이터를 formEx10Pro_정답.jsp에서 화면에 출력해보시오.		
 	--%>
 
-	<form>
+	<form action = "formEx10Pro_연습.jsp" method = "post">
 		<fieldset>
   			<legend>비회원 주문 정보 입력</legend>
   			<p>

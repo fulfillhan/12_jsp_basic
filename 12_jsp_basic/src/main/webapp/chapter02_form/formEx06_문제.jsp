@@ -22,7 +22,7 @@
 	
 	--%>
 	
-	<form>
+	<form action="formEx06Pro_연습.jsp" method="post">
 		<fieldset>
 			<p>키를 입력하세요 :  <input type="text" name="height"><br></p>
 			<p>부모님을 동반하였나요? 

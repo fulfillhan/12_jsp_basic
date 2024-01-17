@@ -4,6 +4,15 @@
 <head>
 <meta charset="utf-8">
 <title>연습문제</title>
+
+<script>
+
+ function checkInput(){
+	 document.f.submit();// submit데이터 함수 -> "f" 가 유일할때 사용 가능
+	 
+ }
+
+</script>
 </head>
 <body>
 
@@ -16,11 +25,12 @@
 		
 	--> 
 
-	<form> 
+	<form action="formEx07Pro_연습.jsp" method = "post" name="f"> 
 		<p>값 1: <input type="number" name="num1" ></p>
 		<p>값 2: <input type="number" name="num2" ></p>
 		<p>값 3: <input type="number" name="num3" ></p>
-		<p><input type="button" onclick="checkInput()" value="전송"></p>
+		<p><input type="button" value="전송" onclick="checkInput()"></p>
+		
 	</form>
 
 </body>
