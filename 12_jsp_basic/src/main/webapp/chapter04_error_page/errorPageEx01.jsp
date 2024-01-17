@@ -21,7 +21,7 @@
 		
 			[ 방법 ]
 		
-			1) web.xml에 아래의 코드를 추가한다.xml : 설정
+			1) web.xml에 아래의 코드를 추가한다.xml : 설정-> server 폴더에 있음
 		
 			<error-page>
 				<error-code>에러코드</error-code>

@@ -9,28 +9,15 @@
 <body>
 
 	<table border="1">
-<%-- 		<%
- int i = 1;
- while(i < 10){
-%>
-		<tr>
-			<%
-		if(i % 2 == 0){ 
-		%>
-			<td style="background-color: skyblue;"><%= i %></td>
-			<%
-			else {
-			%>
-			<td style="backgroud-color: pink"><%=i %></td>
-			<% 
-			}
-			%>
-		     </tr>
 		<%
-				i++;
+		int i = 1;
+		
+		while(i <10){
+			
+			
 		}
+		
 		%>
- --%>
 
 	</table>
 
