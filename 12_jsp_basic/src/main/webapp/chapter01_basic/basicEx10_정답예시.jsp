@@ -13,13 +13,13 @@
 		구구단을 2 ~ 9 단까지 출력해보시오.
 		
 	</p>
-	
+
 	<%
 		for (int i = 2; i < 10 ; i++) {
 	%>
-			<table border="1">
+	          <table border="1">
 				<tr>
-					<th colspan="2"><%=i %>단</th>
+				<th colspan="2"><%=i %>단</th>
 				</tr>		
 	<% 
 			for (int j = 1; j < 10; j++) {

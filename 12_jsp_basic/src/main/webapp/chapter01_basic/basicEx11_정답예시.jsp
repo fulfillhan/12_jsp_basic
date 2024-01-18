@@ -34,7 +34,11 @@
 				<% 
 					for (int j = 1; j <= day; j++) {
 				%>
-						<option value=<%=j %> <% if(j == day) { %> selected <%} %>><%=j %></option>
+						<option value=<%=j %>
+						 <% if(j == day) { %>
+						  selected
+						   <% } %>>
+						   <%=j %></option>
 				<% 			
 					}
 				%>
