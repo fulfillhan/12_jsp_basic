@@ -9,7 +9,7 @@
 	
 	
 	<h3>데이터 전송</h3>
-	<form action="" method="" >		<!-- (중요)jsp파일명이 아닌 서블렛 URL을 작성한다. -->
+	<form action="servletEx01" method="post" >		<!-- (중요)jsp파일명이 아닌 서블렛 URL을 작성한다. -->
 		<table border="1">
 			<tr>
 				<th>데이터1</th>
