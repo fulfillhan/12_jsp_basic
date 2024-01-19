@@ -14,10 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/eIEX01")
 public class EIEX01 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-
-
-
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -32,11 +28,10 @@ public class EIEX01 extends HttpServlet {
 		list3.add("data2");
 		list3.add("data3");
 		
-		
-		
 		RequestDispatcher dis = request.getRequestDispatcher("chapter07_el_jstl/elEx01.jsp");
 		dis.forward(request, response);
 	}
 
 
 }
+ 

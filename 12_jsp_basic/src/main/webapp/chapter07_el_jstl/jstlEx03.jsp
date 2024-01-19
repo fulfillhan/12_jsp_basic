@@ -45,14 +45,14 @@
 	 --%>
 	 
 	 <h3>1) forEach 문</h3>
-	 <c:forEach var = "i" begin="1" end = "10">
+	  <c:forEach var = "i" begin="1" end = "10">
 	 ${i } 
 	 </c:forEach>
 	 <hr>
 	 
 	  <c:forEach var = "i" begin="1" end = "10" step="${i = i +3}">
 	 ${i } 
-	 </c:forEach>
+	 </c:forEach> 
 	 <hr>
 	 
 	
