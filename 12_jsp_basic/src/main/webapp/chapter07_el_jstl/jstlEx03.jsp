@@ -45,16 +45,82 @@
 	 --%>
 	 
 	 <h3>1) forEach 문</h3>
-	  <c:forEach var = "i" begin="1" end = "10">
+	  <c:forEach var = "i" begin="10" end = "10">
 	 ${i } 
 	 </c:forEach>
 	 <hr>
+	 
+	 <%-- 
+	
+	
+		- forEach는 내림차순이 적용되지 않는다.
+		
+		<c:forEach var="i"  begin="10" end="1">
+			${i } 
+		</c:forEach>
+		
+	--%>
 	 
 	  <c:forEach var = "i" begin="1" end = "10" step="${i = i +3}">
 	 ${i } 
 	 </c:forEach> 
 	 <hr>
 	 
+	 
+	<h3>2) forEach문</h3>
+	<c:forEach var="data" items="${datas }">
+		${data } 
+	</c:forEach>
+	<hr>
 	
+	<c:forEach var="data" items="${datas }" varStatus="i">
+		<p id="data${i.count }">${i.count} / ${i.index} / ${data } / ${i.first }</p> 
+	</c:forEach>
+	<hr>
+	 
+	 <table border="1">
+	 	<tr>
+	 		<th>상품코드</th>
+			<th>상품이름</th>
+			<th>부서코드</th>
+			<th>부서이름</th>
+			<th>담당자코드</th>
+			<th>담당자이름</th>
+	 	</tr>
+	 	<c:choose>
+	 	  <c:when test="${not empty productList }">
+	 	   <c:forEach var = "productDTO" items="${productList }">
+	     <tr>
+	     	<td>${productDTO.pdCd }</td>
+			<td>${productDTO.pdNm }</td>
+			<td>${productDTO.deptCd }</td>
+			<td>${productDTO.deptNm }</td>
+			<td>${productDTO.mgrCd }</td>
+			<td>${productDTO.mgrNm }</td>
+	     </tr>
+	 </c:forEach>
+	 	  </c:when>
+	 	  <c:otherwise>
+	 	  	<tr align="center">
+	 	  	<td colspan="6"> 조회된 상품이 없습니다.</td>
+	 	  	</tr>
+	 	  </c:otherwise>
+	 	</c:choose>
+	 	
+	 <c:forEach var = "productDTO" items="${productList }">
+	     <tr>
+	     	<td>${productDTO.pdCd }</td>
+			<td>${productDTO.pdNm }</td>
+			<td>${productDTO.deptCd }</td>
+			<td>${productDTO.deptNm }</td>
+			<td>${productDTO.mgrCd }</td>
+			<td>${productDTO.mgrNm }</td>
+	     </tr>
+	 </c:forEach>
+	 
+	 </table>
+	 
+	 
+	 
 </body>
 </html>

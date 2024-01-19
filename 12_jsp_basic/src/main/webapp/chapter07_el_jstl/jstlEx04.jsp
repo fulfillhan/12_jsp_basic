@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +33,14 @@
 	--%>
 
 	<h3>데이터 형변환</h3>
+	<c:set var = "num1" value="7"/>
+	<c:set var = "num2" value="12"/>
+	<fmt:parseNumber var="num1" value="${num1 }"/>
+	<fmt:parseNumber var="num2" value="${num2 }"/>
+	
+	<c:if test="${num1 < num2 }">
+		<p>${num2 }이 크다</p>
+	</c:if>
 
 	<h3>날짜 형식</h3>
 	
