@@ -47,7 +47,12 @@
 	<c:set var="name1" value="팀 버너스 리"/>
 	<c:set var="name2" value="tim"/>
 	
+	
+	<!-- 관리자만 보여야함 -->
+	<c:if test="관리자라면">
 	<p>${name1 },<c:out value="${name1 }"/></p>
+	</c:if>
+	
 	<p>${name2 },<c:out value="${name2 }"/></p>
 	
 	<hr>

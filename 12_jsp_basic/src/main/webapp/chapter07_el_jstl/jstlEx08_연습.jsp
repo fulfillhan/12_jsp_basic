@@ -17,9 +17,18 @@
 		예) 로그인 성공 or 로그인 실패
  	
  	-->
- 	
- 	<c:set var="dbId" value="qwer1234" />
- 	<c:set var="dbPw" value="1234" />
- 	
+
+	<c:set var="dbId" value="qwer1234" />
+	<c:set var="dbPw" value="1234" />
+
+	<c:choose>
+		<c:when test="${dbId eq id and dbPw eq pw }">
+ 			로그인 성공!
+ 	</c:when>
+		<c:otherwise>
+ 			로그인 실패!
+ 	</c:otherwise>
+	</c:choose>
+
 </body>
 </html>

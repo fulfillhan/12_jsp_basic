@@ -17,7 +17,7 @@
 		- <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 를 선언한 뒤에 사용한다.
 		
 		[ Attribute ]
-		
+		<fmt: 
 		requestEncoding : value 속성을 통해 지정한 문자 셋으로 변경 
 		setLocale 		: 통화 기호나 시간 대역을 설정한 지역에 맞게 표시 
 		timeZone 		: 특정 영역의 시간대를 설정 

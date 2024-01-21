@@ -22,17 +22,18 @@ import javax.servlet.http.HttpServletResponse;
 
 - HTTP 프로토콜 서비스를 지원하는 javax.servlet.http.HttpServlet 클래스를 상속받아서 구현되어진다.
 
-- Java Server(WAS)가 JSP 코드를 읽어들여 서블릿 소스 코드로 변환하여 컴파일한다. (JSP 파일 > Servlet 파일 > 클래스 파일 > 컴파일)	
+- Java Server(WAS = 서블릿컨테이너)가 JSP 코드를 읽어들여 서블릿 소스 코드로 변환하여 컴파일한다. (JSP 파일 > Servlet 파일 > 클래스 파일 > 컴파일)	
 
 - 서블렛은 jsp파일과 다르게 재컴파일이 되어야 하므로 재컴파일 완료 유무를 항상 확인해야 한다.	
 
 - 서블릿(Servlet)은 웹 브라우저에서 request가 있는 경우 애플리케이션 서버(WAS)가 서블릿 클래스의 인스턴스를 생성한다.
 	매번 리퀘스트 할 때마다 인스턴스를 생성하는 것은 서버에 부하가 걸리기 때문에, 
 	처음 생성된 인스턴스를 request에 대한 response 뒤에도 파기하지 않고 클라이언트의 다음 request에서도 재사용하며 
-	서버를 종료하는 등의 경우 서버에서 인스턴스를 파기한다.	
+	서버를 종료하는 등의 경우 서버에서 인스턴스를 파기한다
+	.	
 
 */
-
+			
 
 @WebServlet("/servletEx01")// 클라이언트가 jsp페이지가 아닌 해당 url경로로 웹시스템에 request한다.
 public class ServletEx01 extends HttpServlet {// Http 통신이 가능한 HttpServlet클래스를 상속받아 구현한다.
@@ -46,7 +47,8 @@ public class ServletEx01 extends HttpServlet {// Http 통신이 가능한 HttpSe
 		// 아래의 dispatcher에 명시된 jsp파일로 포워딩 한다.
 		 RequestDispatcher dis= request.getRequestDispatcher("chapter06_servlet/servletEx01.jsp");// request.getRequestDispatcher("jsp 경로");
 		 dis.forward(request, response);
-		
+		 
+	
 	}
 
 	// post형식으로 url요청이 들어왔을 때 수행할 메서드(유저가 보내는 방식)
