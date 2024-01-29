@@ -1,4 +1,4 @@
-package _08_session_cookie;
+ package _08_session_cookie;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -68,21 +68,17 @@ public class SessionLogin extends HttpServlet {
 			isAuthorizedUser = true;
 		}
 		
-		
 		if(isAuthorizedUser) {
-			//세션 등록-> 유지가 가능
-
-			//세션 객체 만들기
-			 HttpSession session = request.getSession();
-			 
-			 //세션 등록하기 > session.setAttribute("세션명", 데이터);
-			 session.setAttribute("id", id);
-			 session.setAttribute("role", "user");
-		
-			//setMaxInactiveInterval(유지기간(초))
-			 session.setMaxInactiveInterval(30);
-			 
-			 RequestDispatcher dis = request.getRequestDispatcher("chapter08_session_cookie/memberMain.jsp"); 
+			
+				HttpSession session = request.getSession();// 세션 객체 생성
+				
+				//세션 등록하기.
+				session.setAttribute("id", id);
+				session.setAttribute("role", "user");
+				
+				session.setMaxInactiveInterval(30);
+				
+				RequestDispatcher dis = request.getRequestDispatcher("chapter08_session_cookie/memberMain.jsp"); 
 				dis.forward(request, response);
 				
 		}else {
@@ -92,7 +88,6 @@ public class SessionLogin extends HttpServlet {
 						history.go(-1);
 					</script>
 				""";
-			
 			response.setContentType("text/html; charset=utf-8");
 			PrintWriter out = response.getWriter();	
 			out.print(jsScript);

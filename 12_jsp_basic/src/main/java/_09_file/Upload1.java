@@ -39,22 +39,21 @@ public class Upload1 extends HttpServlet {
 	 */
 		// 파일의 저장 경로는 웹서비스의 접근 경로가 아닌 물리적인 실제 경로를 적어주어야 한다.
 		// 폴더구분자 '\\' 추가해서 작성필요
-		String saveDirectory = "C:\\Users\\15_web_hsh\\git\\12_jsp_basic\\12_jsp_basic\\src\\main\\webapp\\chapter09_file\\fileRepository\\";// 컴퓨터 환경마다 달라짐
+		String saveDirectory = "C:\\Users\\82108\\git\\12_jsp_basic\\12_jsp_basic\\src\\main\\webapp\\chapter09_file\\fileRepository\\";// 컴퓨터 환경마다 달라짐
 		
 		// MultipartRequest 이 코드가 실제로 파일 업로드를 담당하는 부분이다.
 		//new MultipartRequest(request, 저장폴더, 맥시멈크기,인코딩, (리네임정책));
 		MultipartRequest multipartRequest = new MultipartRequest(request, saveDirectory,1024*1024 *100, "utf-8");
 		
-		Enumeration<?> files= multipartRequest.getFileNames();//<input type="file">인 모든 엘리먼트를 반환한다. 배열과 같이 뭉탱이로 묶어놓아서 다음,다음 으로 넘어가는 배열
-		if(files.hasMoreElements()) {//엘리멘트가 있으면
-			 String element =(String) files.nextElement();//<input type="file"> 엘리먼트를 반환한다.
-			 multipartRequest.getOriginalFileName(element);// 서버에 업로드 '한' 파일명을 반환한다.(원본파일)
-			 multipartRequest.getFilesystemName(element);//서버에 업로드 '된' 파일명을 반환한다.-> getFilesystemName 파일관리 시스템(실제 업로드된 파일)
-			 
-			 
-			 multipartRequest.getContentType(element);// 파일 타입을 반환
-			 multipartRequest.getFile(element).length();// 파일의 크기를 반환(long 타입)
-			 
+		Enumeration<?> files = multipartRequest.getFileNames();
+		
+		if(files.hasMoreElements()) { //엘리먼트가 존재하면
+			String element =(String) files.nextElement(); //<input type="file"> 엘리먼트를 반환
+			multipartRequest.getOriginalFileName(element);// 서버에 업로드 '한' 파일명을 반환
+			multipartRequest.getFilesystemName(element);//서버에 업로드 '된' 파일명을 반환
+			multipartRequest.getContentType(element);//파일 타입을 반환
+			multipartRequest.getFile(element).length();//파일의 크기를 반환(long 타입)
+			
 		}
 		
 	}
