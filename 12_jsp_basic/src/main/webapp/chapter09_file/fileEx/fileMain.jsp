@@ -54,17 +54,6 @@
 	<hr>
 	
 	
-	<form action="upload2" method="post" enctype="multipart/form-data">
-			<fieldset>
-				<legend>파일 업로드2(멀티플 속성)</legend>
-				<p>업로더 : <input type="text" name="uploader"></p>
-				<p>파일명 : <input type="file" name="file" multiple="multiple"></p> <!-- 복수의 파일을 전송할 수 있다. -->
-				<input type="submit" value="upload">
-			</fieldset>
-		</form>
-		
-		<hr>
-
 	<fieldset>
 		<legend>파일 다운로드</legend>	
 		<table border="1"> 
